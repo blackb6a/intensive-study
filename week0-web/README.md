@@ -9,3 +9,4 @@ Date:
 (ensy) Personally made basixss, jsonwebtoken, jsonweirdtoken so maybe give them a try!
 *jsonweirdtoken is fun experienced web players may want to try it*
 
+### [Easy](./EASY.md)
