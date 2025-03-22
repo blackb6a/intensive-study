@@ -1,0 +1,21 @@
+<body onload="init()">
+  <iframe></iframe>
+  <script>
+    const script = "script";
+    let payload =
+      new URLSearchParams(window.location.search).get("payload") ?? "payload";
+
+    payload = payload.replace(/<\/script/gi, "").replace(/["'&\\\n\r\f]/g, "");
+
+    function init() {
+      const html = `
+            <${script}>
+                alert("Here is your payload that does nothing: ${payload}")
+            </${script}>
+            `.replace(/<(\w+)([^>]*)\/>/g, "<$1$2></$1>");
+
+      let frame = document.querySelector("iframe");
+      frame.srcdoc = html;
+    }
+  </script>
+</body>

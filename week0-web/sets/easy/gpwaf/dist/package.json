@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "http": "^0.0.1-security",
+    "openai": "^4.89.0"
+  }
+}
