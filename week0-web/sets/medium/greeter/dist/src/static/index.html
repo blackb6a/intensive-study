@@ -1,0 +1,24 @@
+<head>
+  <script>
+    let name =
+      new URLSearchParams(window.location.search).get("name") ??
+      "John Doe";
+
+    function escapeHtml(htmlStr, attr) {
+      const delim = attr ? /"/g : /<(\w)/g;
+      const escDelim = attr ? "&quot;" : "&lt;$1";
+
+      return String(htmlStr).replace(/&/g, "&amp;").replace(delim, escDelim);
+    }
+
+    function init() {
+      document.body.innerHTML = document.body.innerHTML
+        .replace("<!-- name -->", () => escapeHtml(name))
+        .replace("<!-- name_storage -->", () => escapeHtml(name, true));
+    }
+  </script>
+</head>
+<body onload="init()">
+  Hi, <!-- name -->
+  <storage data-name="<!-- name_storage -->" hidden></storage>
+</body>
