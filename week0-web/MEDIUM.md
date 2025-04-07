@@ -4,8 +4,8 @@
 
 [Link](./sets/medium/flagproxy/dist/)
 
-### greeter *(BsidesHK CTF 2025)*
-> I made a simple app which greets people by their names!
+### greeter *(Original task from ensy)*
+> I made a simple app which greets people by their names! Modified from BsidesHK CTF 2025
 
 [Link](./sets/medium/greeter/dist/)
 
